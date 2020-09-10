@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   constructor(public info:InfoService) { }
-
+anio = new Date().getFullYear();
    ngOnInit(): void {
   }
 }
