@@ -4,13 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class InfoService {
-  datosPersonales=
+  datosPersonales =
   {
     facebook:'',
     twitter:'',
     whatsapp:'+541141711760',
     direccion:'Padre Nuestro 1168 - General Pacheco',
-    email: 'info@transportenortruck.com.ar',
+    email: 'info@transportenortruck.com',
   }
   constructor() { }
 }

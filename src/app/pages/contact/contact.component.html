@@ -1,6 +1,6 @@
 <section class="contact" id="contact">
   <div class="container">
-    <div class="row"></div>
+
     <div class="row">
       <div style="width: 100%">
         <iframe
@@ -19,68 +19,42 @@
       <p class="subheading">
         Si deseas ponerte en contacto, escribinos un mensaje o por WhatsApp
       </p>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <!-- Contact Form - Start -->
-        <div class="row">
-          <form
-            action="mail_handler.php"
-            method="post"
-            name="form"
-            class="form-box"
-          >
-            <div class="col-xs-12">
-              <input
-                type="text"
-                name="name"
-                placeholder="ingrese su nombre"
-                class="transition"
-                id="c_name"
-              />
-            </div>
-            <div class="col-xs-12">
-              <input
-                type="text"
-                name="email"
-                placeholder="ingrese su email"
-                class="transition"
-                id="c_email"
-              />
-            </div>
-            <div class="col-xs-12">
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Ingrese su teléfono"
-                class="transition"
-                id="c_phone"
-              />
-            </div>
-            <div class="col-xs-12">
-              <textarea
-                class="transition"
-                name="msg"
-                placeholder="Ingrese su msj"
-                id="c_message"
-              ></textarea>
-            </div>
-            <div id="response_email" class="col-xs-12"></div>
-            <div class="col-xs-4">
-              <input
-                type="submit"
-                name="submit"
-                value="Enviar"
-                class="btn btn-primary"
-                id="c_send"
-              />
-            </div>
-          </form>
-        </div>
+        <!-- <div class="row">
+          <form action="https://mailthis.to/nortruckemail"
+    method="POST" encType="multipart/form-data">
+    <input type="text" name="name" placeholder="Ingrese su nombre">
+    <input type="email" name="_replyto" placeholder="Ingrese su dirección de correo electrónico">
+    <textarea name="message" placeholder="Ingrese su mensaje aquí"></textarea>
+    <input type="hidden" name="_subject" value="Contact form submitted">
+    <input type="hidden" name="_after" value="http://webeandositio.com/#/">
+    <input type="hidden" name="_honeypot" value="">
+    <input type="hidden" name="_confirmation" value="">
+    <input class="btn btn-primary" type="submit" value="Enviar">
+</form>
+        </div> -->
         <!-- Contact Form - End -->
+        <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)"><div class="form-group">
+          <label for="Email">Email</label>
+          <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Ingrese su email"formControlName="Email">
+          </div>
+          <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" name="Nombre" placeholder="Ingrese su nombre" formControlName="Nombre">
+          </div>
+          <div class="form-group">
+          <label for="comment">Mensaje</label>
+          <textarea class="form-control" formControlName="Mensaje" name="Comment">
+          </textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="!FormData.valid">Submit</button>
+          </form>
       </div>
       <div
-        class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0 contact-full-info"
+        class="col-lg-5 col-md-5 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0 contact-full-info"
       >
-        <h5>Contacto</h5>
+        <h5></h5>
         <p>
           <br />
           Dirección: {{ info.datosPersonales.direccion }}
@@ -109,8 +83,3 @@
   </div>
 </section>
 <!-- Section End - Get In Touch -->
-<div class="col-md-12 col-sm-12 col-xs-12">
-  <div class="row">
-    <div id="contact-map" class="gmap"></div>
-  </div>
-</div>

@@ -7,10 +7,11 @@ import { HeaderComponent } from './pages/shared/header/header.component';
 import { FooterComponent } from './pages/shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { CotizacionComponent } from './pages/cotizacion/cotizacion.component';
 import { MenuComponent } from './pages/shared/menu/menu.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 
 @NgModule(
@@ -26,13 +27,13 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
     CotizacionComponent,
     MenuComponent,
     ServiciosComponent,
-
-
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    ReactiveFormsModule
 
 
 

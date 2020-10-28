@@ -17,8 +17,10 @@ export class HomeComponent implements OnInit {
          if (!!window['SHIPPING_SETTINGS'] && !!window['SHIPPING_SETTINGS']['imageCarousel'])
           window['SHIPPING_SETTINGS']['imageCarousel']();
       });
-    })(jQuery);
+    })
+    (jQuery);
   }
+
 
 
 }

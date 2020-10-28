@@ -163,7 +163,7 @@ jQuery(function($) {
             vid.pause();
 
             $('#bgvid').on('ended', function () {
-                // only functional if "loop" is removed 
+                // only functional if "loop" is removed
                 vid.pause();
                 // to capture IE10
                 vidFade();
@@ -410,7 +410,7 @@ jQuery(function($) {
                 var src = $(this).attr("src");
                 var oldsrc = src;
                 src = src.replace("-lightgreen", "-" + color); // lightgreen on top always
-                src = src.replace("-darkblue", "-" + color); // darkblue on top always 
+                src = src.replace("-darkblue", "-" + color); // darkblue on top always
                 src = src.replace("-yellow", "-" + color);
                 src = src.replace("-red", "-" + color);
                 src = src.replace("-orange", "-" + color);
@@ -446,7 +446,7 @@ jQuery(function($) {
     }
 
     /******************************
-     initialize respective scripts 
+     initialize respective scripts
      *****************************/
     $(document).ready(function() {
         SHIPPING_SETTINGS.galleryFiltering();
@@ -473,6 +473,7 @@ jQuery(function($) {
     $(window).load(function() {
         SHIPPING_SETTINGS.isotopeMasonaryGallery();
         SHIPPING_SETTINGS.imageCarousel();
+
     });
 
 });
