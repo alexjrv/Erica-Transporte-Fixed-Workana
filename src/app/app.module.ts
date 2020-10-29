@@ -12,6 +12,7 @@ import { CotizacionComponent } from './pages/cotizacion/cotizacion.component';
 import { MenuComponent } from './pages/shared/menu/menu.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { NgxGalleryModule } from 'ngx-gallery-9';
 
 
 @NgModule(
@@ -33,7 +34,8 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxGalleryModule
 
 
 

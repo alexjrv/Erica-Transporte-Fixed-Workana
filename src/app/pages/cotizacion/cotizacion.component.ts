@@ -15,9 +15,9 @@ import {
 export class CotizacionComponent implements OnInit {
   FormData: FormGroup;
   constructor(private contact: ContactService,
-    private builder: FormBuilder) { }
+              private builder: FormBuilder) { }
 
-    onSubmit(FormData) {
+      onSubmit(FormData): any {
       console.log(FormData);
       this.contact.postMessage(FormData).subscribe(
         (response) => {
@@ -30,7 +30,7 @@ export class CotizacionComponent implements OnInit {
         }
       );
     }
-    ngOnInit() {
+    ngOnInit(): void {
       this.FormData = this.builder.group({
         Origen: new FormControl('', [Validators.required]),
         Destino: new FormControl('', [Validators.required]),
